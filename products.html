@@ -2351,17 +2351,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    var navToggle = document.querySelector('.navbar-toggler');
-    var navMenu = document.querySelector('.navbar-collapse');
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function () {
-            var expanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', String(!expanded));
-            navMenu.classList.toggle('show', !expanded);
-        });
-    }
-
-
     var carousel = document.getElementById('homeCarousel');
     if (carousel) {
         var slides = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-item'));
