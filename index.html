@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Wolfbyte Lab</title>
+
 <link rel="icon" type="image/jpeg" href="assets/images/wolfbyte-logo.jpg">
 <style>
 :root {
@@ -1588,6 +1590,7 @@ body::after { width:6rem;height:6rem;border:8px solid #89986b;background:#b9c68a
     .col-lg-7 { width:calc((100% - 1.5rem)*.583333); }
     .col-lg-8 { width:calc((100% - 1.5rem)*.666667); }
 }
+
 @media (max-width:991.98px) {
     .navbar .container { flex-wrap:wrap;row-gap:.75rem; }
     .navbar-toggler { display:grid;place-items:center;flex:0 0 auto;width:3.25rem;height:3rem;padding:0;color:#30462f;border:3px solid #30462f;border-radius:3px;background:#fff8df;box-shadow:3px 3px 0 #30462f;position:relative;z-index:2; }
@@ -1596,6 +1599,8 @@ body::after { width:6rem;height:6rem;border:8px solid #89986b;background:#b9c68a
     .navbar-nav { flex-direction:column;align-items:stretch;width:100%;gap:.5rem; }
     .navbar-nav .nav-link { width:100%;text-align:center; }
 }
+
+
 @media (min-width:1200px) { .col-xl-3 { width:calc((100% - 4.5rem)/4); } }</style>
 </head>
 <body>
@@ -1792,6 +1797,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
     var navToggle = document.querySelector('.navbar-toggler');
     var navMenu = document.querySelector('.navbar-collapse');
     if (navToggle && navMenu) {
@@ -1807,6 +1813,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
 
     var customProducts = [
         // {
@@ -2397,6 +2404,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 250);
         }
     }
+
+
+    var navToggle = document.querySelector('.navbar-toggler');
+    var navMenu = document.querySelector('.navbar-collapse');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function () {
+            var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            navMenu.classList.toggle('show', !expanded);
+        });
+    }
+
 
     var carousel = document.getElementById('homeCarousel');
     if (carousel) {

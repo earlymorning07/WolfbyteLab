@@ -1588,6 +1588,7 @@ body::after { width:6rem;height:6rem;border:8px solid #89986b;background:#b9c68a
     .col-lg-7 { width:calc((100% - 1.5rem)*.583333); }
     .col-lg-8 { width:calc((100% - 1.5rem)*.666667); }
 }
+
 @media (min-width:1200px) { .col-xl-3 { width:calc((100% - 4.5rem)/4); } }
 @media (max-width:991.98px) {
     .navbar .container { flex-wrap:wrap;row-gap:.75rem; }
@@ -1597,7 +1598,11 @@ body::after { width:6rem;height:6rem;border:8px solid #89986b;background:#b9c68a
     .navbar-nav { flex-direction:column;align-items:stretch;width:100%;gap:.5rem; }
     .navbar-nav .nav-link { width:100%;text-align:center; }
 }
+@media (min-width:1200px) { .col-xl-3 { width:calc((100% - 4.5rem)/4); } }
 </style>
+
+
+
 </head>
 <body>
 <header class="site-header sticky-top">
@@ -1669,7 +1674,10 @@ body::after { width:6rem;height:6rem;border:8px solid #89986b;background:#b9c68a
         </div>
     </div>
 </footer>
+
+
 <script>
+
 document.addEventListener('DOMContentLoaded', function () {
     var current = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('[data-nav]').forEach(function (link) {
@@ -1686,6 +1694,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navToggle.setAttribute('aria-expanded', String(!expanded));
             navMenu.classList.toggle('show', !expanded);
         });
+
         navMenu.querySelectorAll('[data-nav]').forEach(function (link) {
             link.addEventListener('click', function () {
                 navToggle.setAttribute('aria-expanded', 'false');
@@ -1694,6 +1703,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
 </script>
 </body>
 </html>
